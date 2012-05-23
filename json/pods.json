@@ -1,0 +1,21 @@
+[{ "id"       : "01"
+, "title"    : "Primer Podcast."
+, "date"     : "29/04/2012"
+, "duration" : "01:04:40"
+, "people"   : {
+    "uokesita" : "Osledy Bazó"
+  , "sadasant" : "Daniel Rodríguez"
+  }
+, "tags"     : ["código fuente", "aplicación", "movil", "implementación", "javascript", "remote", "debugging", "adobe", "git", "vim"]
+, "location" : "http://echandocodigo.com/podcasts/01/01.mp3"
+},{ "id"          : "02"
+, "title"       : "Segundo Podcast."
+, "date"        : "08/05/2012"
+, "duration"    : "01:21:13"
+, "people"   : {
+    "uokesita" : "Osledy Bazó"
+  , "sadasant" : "Daniel Rodríguez"
+  }
+, "location"    : "http://echandocodigo.com/podcasts/02/02.mp3"
+, "tags"        : "cookies rest ruby rails api iOS remote debugging OOP tiling arch linux touch emscripten adobe brackets opa language gecko mozilla"
+}]
