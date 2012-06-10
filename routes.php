@@ -25,7 +25,7 @@ function pods($params) {
     $podsDir   = 'podcasts/*';
     $podsGlob  = null;
 
-    // Regenerating the json/pods.json file
+    // Regenerating json/pods.json
     //
     // if pods/?regenerate=1, or
     // if the file doesn't exists, or
@@ -42,6 +42,7 @@ function pods($params) {
     ) {
       if (!$podsGlob) $podsGlob = glob($podsDir);
       $newJSON = '[';
+
       foreach ($podsGlob as $k => $v) {
         $info = file_get_contents($v.'/info.json');
         $newJSON .= $info . ',';
@@ -60,18 +61,18 @@ function pods($params) {
 
     // Separating in columns
     // For a pinterest-like concept
-    $flags = array(true, false);
-    echo "<table><tr>";
-    for ($i = 0; $i < 2; $i++) {
-      echo "<td valign='top'>";
+    //$flags = array(true, false);
+    //echo "<table><tr>";
+    //for ($i = 0; $i < 2; $i++) {
+    //  echo "<td valign='top'>";
       foreach ($pods as $k => $v) {
-        if (($k+1)%2 == $flags[$i]) {
+    //    if (($k+1)%2 == $flags[$i]) {
           $GLOBALS[ec]->view('views/pods_pod', $v);
-        }
+    //    }
       }
-      echo "</td>";
-    }
-    echo "</tr></table>";
+    //  echo "</td>";
+    //}
+    //echo "</tr></table>";
   }
 
   // Render the pods' view, and fill it with pods_content()
@@ -115,6 +116,28 @@ function pod($params, $frompods = null) {
     title    => 'Podcast '.$pod.' :: EchandoCodigo.com'
   , keywords => $json->tags
   ), content);
+}
+
+
+// Contacto
+function contacto() {
+
+  // Contact view.
+  function content() {
+    $GLOBALS['ec']->view('views/contact');
+  }
+
+  // Layout
+  $GLOBALS[ec]->view('views/layout', array(
+    title    => 'Contacto :: EchandoCodigo.com'
+  ), content);
+}
+
+
+// RSS
+function rss() {
+  $json = json_decode(file_get_contents('json/pods.json'));
+  $GLOBALS[ec]->view('views/rss', $json);
 }
 
 

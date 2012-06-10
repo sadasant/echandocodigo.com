@@ -12,9 +12,10 @@ html {
 }
 body {
   background-color: white;
-  padding    : 0px;
-  margin     : 0px;
-  overflow-x : hidden;
+  padding     : 0px;
+  margin      : 0px;
+  overflow-x  : hidden;
+  font-family : sans-serif;
 }
 table {
   color : inherit;
@@ -44,7 +45,7 @@ a, .content a:visited {
   font-size   : 33px;
   font-weight : bold;
   padding-top : 90px;
-  font-family : monospace;
+  font-family : sans-serif;
 }
 #main-title #location {
   float : left;
@@ -52,6 +53,11 @@ a, .content a:visited {
 }
 #main-title #location:hover {
   color : #999;
+}
+#main-title #location img {
+  margin-top    : 4px;
+  margin-bottom : -4px;
+  margin-right  : 6px;
 }
 #main-title #section {
   float : left;
@@ -75,7 +81,7 @@ a, .content a:visited {
 }
 #head #menu {
   height     : 25px;
-  width      : 500px;
+  width      : 390px;
   margin     : 0 auto;
   overflow   : hidden;
   color      : white;

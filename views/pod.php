@@ -9,7 +9,7 @@
   }
   .details td {
     font-size      : 11px;
-    width          : 40%;
+    width          : 30%;
     text-align     : center;
     letter-spacing : 1px;
     color          : #bdbdbd;
@@ -27,7 +27,7 @@
 
   <div id="main-title">
     <div id="location">
-      <a href="/">EchandoCodigo.com/</a>
+      <a href="/"><img src="/img/ec32.png"/>EchandoCodigo.com/</a>
     </div>
     <div id="section">
       <a href="/pods/">pods/</a><a href="/pods/<?=$p[id]?>"><?=$p[id]?></a>
@@ -42,16 +42,17 @@
 
     <table class="details">
       <tr>
-        <td>Duration: <?=$p[info]->duration?></td>
-        <td>Date:     <?=$p[info]->date?>    </td>
+        <td>Duración: <?=$p[info]->duration?></td>
+        <td>Fecha:    <?=$p[info]->date?>    </td>
+        <td><a href=" <?=$p[info]->location?>" target="_blank">&rarr; Descargar &larr;</a></td>
       </tr>
     </table>
 
     <h2><?=$p[info]->title?></h1>
 
-    <b><a href="<?=$p[info]->location?>" target="_blank">&rarr; Descarga Directa &larr;</a></b>
-    <br><br>
+    <p class="description"><?=$p[info]->description?></p>
 
+    <br>
     <b>Participantes:</b>
     <ul><?
       $people = $p[info]->people;

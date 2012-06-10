@@ -75,7 +75,7 @@
 
   <div id="main-title">
     <div id="location">
-      <a href="/">EchandoCodigo.com/</a>
+      <a href="/"><img src="/img/ec32.png"/>EchandoCodigo.com/</a>
     </div>
     <div id="section">
       <a href="/pods/">pods/</a>

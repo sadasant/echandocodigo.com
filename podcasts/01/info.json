@@ -1,11 +1,12 @@
-{ "id"       : "01"
-, "title"    : "Primer Podcast."
-, "date"     : "29/04/2012"
-, "duration" : "01:04:40"
-, "people"   : {
-    "uokesita" : "Osledy Bazó"
-  , "sadasant" : "Daniel Rodríguez"
+{ "id"          : "01"
+, "title"       : "Primer Podcast."
+, "date"        : "29/04/2012"
+, "duration"    : "01:04:40"
+, "description" : "Liberaciones de código, aplicaciones móviles, remote debugging, GIT y VIM."
+, "people"      : {
+    "uokesita"  : "Osledy Bazó"
+  , "sadasant"  : "Daniel Rodríguez"
   }
-, "tags"     : ["código fuente", "aplicación", "movil", "implementación", "javascript", "remote", "debugging", "adobe", "git", "vim"]
-, "location" : "http://echandocodigo.com/podcasts/01/01.mp3"
+, "tags"        : ["código fuente", "aplicación", "movil", "implementación", "javascript", "remote", "debugging", "adobe", "git", "vim"]
+, "location"    : "http://echandocodigo.com/podcasts/01/01.mp3"
 }

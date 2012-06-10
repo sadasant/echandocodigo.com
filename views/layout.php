@@ -5,16 +5,17 @@
     <title><?=$p[title]?></title>
     <link rel="shortcut icon" href="/img/ec.ico" />
     <link rel="stylesheet" type="text/css" href="/css/ec.css"/>
+    <link rel="alternate" type="application/rss+xml" href="/rss" title="RSS feed for EchandoCodigo.com">
   </head>
   <body>
 
     <!-- Hidden Menu -->
     <div id="head">
       <ul id="menu">
-        <li> <a href= "/"         > ra&iacute;z </a>  </li>
-        <li> <a href= "/pods"     > pods        </a>  </li>
-        <li> <a href= "/eventos"  > eventos     </a>  </li>
-        <li> <a href= "/contacto" > contacto    </a>  </li>
+        <li> <a href= "/"         > raíz     </a>  </li>
+        <li> <a href= "/pods"     > pods     </a>  </li>
+        <li> <a href= "/rss" type="application/rss+xml" > rss </a> </li>
+        <li> <a href= "/contacto" > contacto </a>  </li>
       </ul>
     </div>
 
