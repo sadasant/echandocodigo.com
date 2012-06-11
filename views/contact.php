@@ -1,5 +1,6 @@
 <div class="section text">
 
+  <img src="/img/laptop_ray.png" alt="" style="float:right;margin:10px 60px" />
   Puedes contactarnos por Twitter:
   <br>
   <br>
