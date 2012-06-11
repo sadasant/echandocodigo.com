@@ -109,7 +109,7 @@
 <script>
   // Adapting the player's width to the window size.
   (function(D){
-    var width  = D.body.clientWidth * .75
+    var width  = D.body.clientWidth * .74
       , player = D.getElementById('player')
     player.innerHTML = "\
     <!-- http://flash-mp3-player.net/ -->\

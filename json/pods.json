@@ -1,0 +1,23 @@
+[{ "id"          : "01"
+, "title"       : "Primer Podcast."
+, "date"        : "29/04/2012"
+, "duration"    : "01:04:40"
+, "description" : "Liberaciones de código, aplicaciones móviles, remote debugging, GIT y VIM."
+, "people"      : {
+    "uokesita"  : "Osledy Bazó"
+  , "sadasant"  : "Daniel Rodríguez"
+  }
+, "tags"        : ["código fuente", "aplicación", "movil", "implementación", "javascript", "remote", "debugging", "adobe", "git", "vim"]
+, "location"    : "http://echandocodigo.com/podcasts/01/01.mp3"
+},{ "id"          : "02"
+, "title"       : "Segundo Podcast."
+, "date"        : "08/05/2012"
+, "duration"    : "01:21:13"
+, "description" : "Nueva ley anti Cookies, opiniones sobre los APIs REST y los Objetos, aventuras en linux con los Tiling Window Managers, el futuro de la interacción táctil con Touché, C++ compilado a JavaScript, el Lenguaje de Programación Opa y el Boot to Gecko de Mozilla."
+, "people"      : {
+    "uokesita"  : "Osledy Bazó"
+  , "sadasant"  : "Daniel Rodríguez"
+  }
+, "location"    : "http://echandocodigo.com/podcasts/02/02.mp3"
+, "tags"        : "cookies rest ruby rails api iOS remote debugging OOP tiling arch linux touch emscripten adobe brackets opa language gecko mozilla"
+}]
