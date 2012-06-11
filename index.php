@@ -16,7 +16,7 @@ if (!$_SESSION[pods]) {
 }
 
 // Regenerating Pods' JSON
-// $ec->regenerate();
+$ec->regenerate();
 
 // Parsing the requested URL
 $req  = $ec->parseURL();

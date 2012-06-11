@@ -40,7 +40,7 @@ class EC {
     //
     // What it does is:
     //   Append to a new strin all the info.json inside the files that /podcasts/ has.
-    
+
     if ($_GET[regenerate]
     || !file_exists($podsJSON)
     || (time() - filemtime($podsJSON)) >= $cacheTime
