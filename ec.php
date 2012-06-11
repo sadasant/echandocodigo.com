@@ -24,6 +24,45 @@ class EC {
     );
   }
 
+  // Regenerate JSON
+  function regenerate() {
+    $podsJSON  = 'json/pods.json';
+    $cacheTime = '518400'; // 6 days
+    $podsDir   = 'podcasts/*';
+    $podsGlob  = null;
+
+    // Regenerating json/pods.json
+    //
+    // if /?regenerate=1, or
+    // if the file doesn't exists, or
+    // if the file is 6 days old, or
+    // if the number of pods inside the json file is under the number of pods inside the podcasts folder.
+    //
+    // What it does is:
+    //   Append to a new strin all the info.json inside the files that /podcasts/ has.
+    
+    if ($_GET[regenerate]
+    || !file_exists($podsJSON)
+    || (time() - filemtime($podsJSON)) >= $cacheTime
+    || ($pods = json_decode(file_get_contents($podsJSON)) && count($pods) > count($podsGlob = glob($podsDir)))
+    ) {
+      if (!$podsGlob) $podsGlob = glob($podsDir);
+      $newJSON = '[';
+
+      foreach ($podsGlob as $k => $v) {
+        $info = file_get_contents($v.'/info.json');
+        $newJSON .= $info . ',';
+      }
+      $newJSON[strlen($newJSON) - 1] = ']';
+
+      // Writing pods.json
+      $file = fopen($podsJSON, 'w');
+      fwrite($file, $newJSON);
+      fclose($file);
+      $_SESSION[pods] = json_decode(file_get_contents($podsJSON));
+    }
+  }
+
 }
 
 // Using the class...

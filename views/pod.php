@@ -1,74 +1,81 @@
 <!-- Content with podcasts -->
 <style>
-  #player {
-    margin : 10px 0;
-  }
-  .details {
-    width   : 95%;
-    padding : 0 20%;
-  }
-  .details td {
-    font-size      : 11px;
-    width          : 30%;
-    text-align     : center;
-    letter-spacing : 1px;
-    color          : #bdbdbd;
-  }
-  #disqus_thread {
-    color       : #999;
-    font-family : sans;
-  }
-  #disqus_thread h3,  .dsq-comment-text {
-    color : #250520;
-  }
+.section #player {
+  margin : 10px 0
+}
+.section .details {
+  width   : 95%
+; padding : 0 20%
+}
+.section .details td {
+  font-size      : 11px
+; width          : 30%
+; text-align     : center
+; letter-spacing : 1px
+; color          : #bdbdbd
+}
+.section .details td a {
+; font-weight : bold
+}
+.section .details td a:hover {
+  color : red
+}
+.section ul li {
+  list-style : disc
+; padding-left : 5px
+; margin : 10px 15px 0
+}
+.section #disqus_thread {
+  color       : #999;
+  font-family : sans;
+}
+.section #disqus_thread h3,  .dsq-comment-text {
+  color : #250520;
+}
 </style>
 
-<div class="center">
+<div class="section text">
 
-  <div id="main-title">
-    <div id="location">
-      <a href="/"><img src="/img/ec32.png"/>EchandoCodigo.com/</a>
-    </div>
-    <div id="section">
-      <a href="/pods/">pods/</a><a href="/pods/<?=$p[id]?>"><?=$p[id]?></a>
-    </div>
-  </div>
+  <div id="player"></div>
 
-  <div class="clearfix"></div>
+  <table class="details">
+    <tr>
+      <td>Duración: <?=$p[info]->duration?></td>
+      <td>Fecha:    <?=$p[info]->date?>    </td>
+      <td><a href=" <?=$p[info]->location?>" target="_blank">&rarr; Descargar &larr;</a></td>
+    </tr>
+  </table>
 
-  <div class="content">
+</div>
 
-    <div id="player"></div>
+<div class="section text">
 
-    <table class="details">
-      <tr>
-        <td>Duración: <?=$p[info]->duration?></td>
-        <td>Fecha:    <?=$p[info]->date?>    </td>
-        <td><a href=" <?=$p[info]->location?>" target="_blank">&rarr; Descargar &larr;</a></td>
-      </tr>
-    </table>
+  <h2><?=$p[info]->title?></h1>
 
-    <h2><?=$p[info]->title?></h1>
+  <p class="description"><?=$p[info]->description?></p>
 
-    <p class="description"><?=$p[info]->description?></p>
+  <br>
+  <b>Participantes:</b>
+  <ul>
+  <?
+    $people = $p[info]->people;
+    foreach ($people as $k => $v) {
+      echo "<li><a href='https://mobile.twitter.com/$k'>$v</a></li>";
+    }
+  ?>
+  </ul>
+</div>
 
-    <br>
-    <b>Participantes:</b>
-    <ul><?
-      $people = $p[info]->people;
-      foreach ($people as $k => $v) {
-        echo "<li><a href='https://mobile.twitter.com/$k'>$v</a><br><br></li>";
-      }
-    ?></ul>
-    
-    <?// Extracting the description of this podcast.
-      $art = 'podcasts/'.$p[id].'/article.php';
-      if (file_exists($art)) {
-        include($art);
-      }
-    ?>
-  </div>
+<div class="section">
+  <?// Extracting the description of this podcast.
+    $art = 'podcasts/'.$p[id].'/article.php';
+    if (file_exists($art)) {
+      include($art);
+    }
+  ?>
+</div>
 
+<div class="section text">
   <!-- AddThis Button BEGIN -->
   <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
   <a class="addthis_button_preferred_1"></a>
@@ -81,7 +88,7 @@
   <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
   <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fb896c542c10df6"></script>
   <!-- AddThis Button END -->
-
+  <br/>
   <!-- DISQUS BEGIN -->
   <div id="disqus_thread"></div>
   <script type="text/javascript">
@@ -102,11 +109,11 @@
 <script>
   // Adapting the player's width to the window size.
   (function(D){
-    var width  = D.body.clientWidth * .62
+    var width  = D.body.clientWidth * .75
       , player = D.getElementById('player')
     player.innerHTML = "\
     <!-- http://flash-mp3-player.net/ -->\
-    <object type='application/x-shockwave-flash' data='/flash/player_mp3_maxi.swf' width='"+width+"' height='60'>\
+    <object type='application/x-shockwave-flash' data='/flash/player_mp3_maxi.swf' width='100%' height='60'>\
       <param name='movie' value='/flash/player_mp3_maxi.swf' />\
       <param name='FlashVars' value='mp3=<?=$p[info]->location?>&config=/flash/config_maxi.txt&width="+width+"' />\
     </object>"
