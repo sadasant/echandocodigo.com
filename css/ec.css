@@ -32,8 +32,8 @@ a {
 ; color : inherit
 }
 
-#top, .content .section .play, .content .section .tema, .content .section .avatar, .content .section.text {
-; -moz-box-shadow    : 0 1px 3px rgba(0,0,0, .3)
+#top, .content .section .play, .content .section .tema, .content .section .avatar, .content .section.text, .pod {
+  -moz-box-shadow    : 0 1px 3px rgba(0,0,0, .3)
 ; -webkit-box-shadow : 0 1px 3px rgba(0,0,0, .3)
 ; -ms-box-shadow     : 0 1px 3px rgba(0,0,0, .3)
 ; -o-box-shadow      : 0 1px 3px rgba(0,0,0, .3)
