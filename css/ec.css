@@ -21,7 +21,7 @@ body {
 ; font-family : sans-serif
 ; padding     : 0
 ; margin      : 0
-/*; background-image : url(/img/bg.png)*/
+; background-image : url(/img/bg.png)
 }
 h2 {
   font-size   : 22px
@@ -85,7 +85,7 @@ a {
 ; float : left
 ; font-size   : 22px
 ; font-weight : bold
-; margin : 0 2% 0 3%
+; margin : 0 4% 0 1%
 ; text-decoration : none
 }
 #top #menu .active {
