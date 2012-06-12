@@ -30,9 +30,11 @@
   </div>
 
   <div id="btm">
-    echandocodigo.com <br />
-    Copyright 2012    <br />
-    <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC by-nc-sa 3.0</a>
+    <a href="/README">
+      EchandoCodigo.com <br/>
+      Copyright <?=date('y')?> <br/>
+      README
+    </a>
   </div>
 
 </body>

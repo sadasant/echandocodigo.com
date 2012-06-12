@@ -91,10 +91,20 @@ function contacto() {
 
 // RSS
 function rss() {
-  $json = json_decode(file_get_contents('json/pods.json'));
-  $GLOBALS['ec']->view('views/rss', $json);
+  $GLOBALS['ec']->view('views/rss', $_SESSION['pods']);
 }
 
+// README
+function README() {
+  function content() {
+
+    $GLOBALS['ec']->view('views/README');
+  }
+  // Layout
+  $GLOBALS['ec']->view('views/layout', array(
+    'active' => '/'
+  ), content);
+}
 
 // Forbidden
 function forbidden() {

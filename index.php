@@ -19,7 +19,7 @@ if (!$_SESSION['pods']) {
 $ec->regenerate();
 
 // Parsing the requested URL
-$req  = $ec->parseURL();
+$req = $ec->parseURL();
 
 // If we have that route, render the page.
 // else, show the forbidden announce.
