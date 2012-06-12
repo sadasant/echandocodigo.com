@@ -4,11 +4,11 @@
 function index() {
   function content() {
 
-    $GLOBALS[ec]->view('views/home');
+    $GLOBALS['ec']->view('views/home');
   }
   // Layout
-  $GLOBALS[ec]->view('views/layout', array(
-    active => '/'
+  $GLOBALS['ec']->view('views/layout', array(
+    'active' => '/'
   ), content);
 }
 
@@ -24,19 +24,19 @@ function pods($params) {
     $pods = array_reverse($_SESSION['pods']);
 
     foreach ($pods as $k => $v) {
-      $GLOBALS[ec]->view('views/pods_pod', $v);
+      $GLOBALS['ec']->view('views/pods_pod', $v);
     }
   }
 
   // Render the pods' view, and fill it with pods_content()
   function content() {
-    $GLOBALS[ec]->view('views/pods', null, pods_content);
+    $GLOBALS['ec']->view('views/pods', null, pods_content);
   }
 
   // Layout, filled with content()
   $GLOBALS[ec]->view('views/layout', array(
-    title  => 'Pods :: EchandoCodigo.com'
-  , active => '/pods'
+    'title'  => 'Pods :: EchandoCodigo.com'
+  , 'active' => '/pods'
   ), content);
 
 }
@@ -46,7 +46,7 @@ function pods($params) {
 // A single podcast, /pod/? or /pods/? (check the first line of pods())
 function pod($params, $frompods = null) {
   $pod  = $params[0];
-  $json = $GLOBALS[json] = json_decode(file_get_contents('podcasts/'.$pod.'/info.json'));
+  $json = $GLOBALS['json'] = json_decode(file_get_contents('podcasts/'.$pod.'/info.json'));
 
   // Not exists? Show forbidden alert.
   if (!($pod && file_exists('podcasts/'.$pod))) return forbidden();
@@ -60,15 +60,15 @@ function pod($params, $frompods = null) {
   // Podcast view.
   function content() {
     $GLOBALS['ec']->view('views/pod', array(
-      id   => $GLOBALS[req][params][0]
-    , info => $GLOBALS[json]
+      'id'   => $GLOBALS['req']['params'][0]
+    , 'info' => $GLOBALS['json']
     ));
   }
 
   // Layout
   $GLOBALS[ec]->view('views/layout', array(
-    title    => 'Podcast '.$pod.' :: EchandoCodigo.com'
-  , keywords => $json->tags
+    'title'    => 'Podcast '.$pod.' :: EchandoCodigo.com'
+  , 'keywords' => $json->tags
   ), content);
 }
 
@@ -83,8 +83,8 @@ function contacto() {
 
   // Layout
   $GLOBALS[ec]->view('views/layout', array(
-    title  => 'Contacto :: EchandoCodigo.com'
-  , active => '/contacto'
+    'title'  => 'Contacto :: EchandoCodigo.com'
+  , 'active' => '/contacto'
   ), content);
 }
 
@@ -92,13 +92,13 @@ function contacto() {
 // RSS
 function rss() {
   $json = json_decode(file_get_contents('json/pods.json'));
-  $GLOBALS[ec]->view('views/rss', $json);
+  $GLOBALS['ec']->view('views/rss', $json);
 }
 
 
 // Forbidden
 function forbidden() {
-  $GLOBALS[ec]->view('views/404');
+  $GLOBALS['ec']->view('views/404');
 }
 
 ?>

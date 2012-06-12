@@ -16,11 +16,11 @@ class EC {
   // Getting the url appendix: /?
   // and all the sub-directories as params: /?/?/?/?
   function parseURL() {
-    $page = ($page = explode('.php/', strtolower($_SERVER[PHP_SELF]))) ? $page[1] : '';
+    $page = ($page = explode('.php/', strtolower($_SERVER['PHP_SELF']))) ? $page[1] : '';
     $page = explode('/', $page);
     return array(
-      params => array_slice($page, 1)
-    , page   => $page[0] ? $page[0] : 'index'
+      'params' => array_slice($page, 1)
+    , 'page'   => $page[0] ? $page[0] : 'index'
     );
   }
 
@@ -41,7 +41,7 @@ class EC {
     // What it does is:
     //   Append to a new strin all the info.json inside the files that /podcasts/ has.
 
-    if ($_GET[regenerate]
+    if ($_GET['regenerate']
     || !file_exists($podsJSON)
     || (time() - filemtime($podsJSON)) >= $cacheTime
     || ($pods = json_decode(file_get_contents($podsJSON)) && count($pods) > count($podsGlob = glob($podsDir)))
@@ -59,7 +59,7 @@ class EC {
       $file = fopen($podsJSON, 'w');
       fwrite($file, $newJSON);
       fclose($file);
-      $_SESSION[pods] = json_decode(file_get_contents($podsJSON));
+      $_SESSION['pods'] = json_decode(file_get_contents($podsJSON));
     }
   }
 

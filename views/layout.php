@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><?=$p[title] ? $p[title] : "EchandoCodigo.com"?></title>
+  <title><?=$p['title'] ? $p['title'] : "EchandoCodigo.com"?></title>
   <!--[if lt IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <![endif]-->
@@ -18,10 +18,10 @@
   <div id="top">
     <a id="logo" href="#"><img src="/img/logo_66x66.png" alt="EchandoCodigo" /></a>
     <div id="menu">
-      <a href="/"         class="<?=$p[active] == '/'         ? 'active' : '' ?>">EchandoCodigo</a>
-      <a href="/pods"     class="<?=$p[active] == '/pods'     ? 'active' : '' ?>">pods</a>
-      <a href="/rss"      class="<?=$p[active] == '/rss'      ? 'active' : '' ?>" type="application/rss+xml" >rss</a>
-      <a href="/contacto" class="<?=$p[active] == '/contacto' ? 'active' : '' ?>">contacto</a>
+      <a href="/"         class="<?=$p['active'] == '/'         ? 'active' : '' ?>">EchandoCodigo</a>
+      <a href="/pods"     class="<?=$p['active'] == '/pods'     ? 'active' : '' ?>">pods</a>
+      <a href="/rss"      class="<?=$p['active'] == '/rss'      ? 'active' : '' ?>" type="application/rss+xml" >rss</a>
+      <a href="/contacto" class="<?=$p['active'] == '/contacto' ? 'active' : '' ?>">contacto</a>
     </div>
   </div>
 

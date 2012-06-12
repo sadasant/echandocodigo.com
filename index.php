@@ -11,8 +11,8 @@ include('ec.php');
 include('routes.php');
 
 // Pods' JSON's cache
-if (!$_SESSION[pods]) {
-  $_SESSION[pods] = json_decode(file_get_contents('json/pods.json'));
+if (!$_SESSION['pods']) {
+  $_SESSION['pods'] = json_decode(file_get_contents('json/pods.json'));
 }
 
 // Regenerating Pods' JSON
@@ -23,8 +23,8 @@ $req  = $ec->parseURL();
 
 // If we have that route, render the page.
 // else, show the forbidden announce.
-if (function_exists($req[page])) {
-  $req[page]($req[params]);
+if (function_exists($req['page'])) {
+  $req['page']($req['params']);
 } else {
   forbidden();
 }

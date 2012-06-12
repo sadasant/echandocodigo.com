@@ -8,7 +8,7 @@
 </div>
 
 <div class="section">
-  <a href="/pods/<?=end($_SESSION[pods])->id?>"><div class="play">&#9654; Dale Play a nuestro último Podcast &#9654;</div></a>
+  <a href="/pods/<?=end($_SESSION['pods'])->id?>"><div class="play">&#9654; Dale Play a nuestro último Podcast &#9654;</div></a>
 </div>
 
 <div class="section">

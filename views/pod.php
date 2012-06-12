@@ -115,7 +115,7 @@
     <!-- http://flash-mp3-player.net/ -->\
     <object type='application/x-shockwave-flash' data='/flash/player_mp3_maxi.swf' width='100%' height='60'>\
       <param name='movie' value='/flash/player_mp3_maxi.swf' />\
-      <param name='FlashVars' value='mp3=<?=$p[info]->location?>&config=/flash/config_maxi.txt&width="+width+"' />\
+      <param name='FlashVars' value='mp3=<?=$p['info']->location?>&config=/flash/config_maxi.txt&width="+width+"' />\
     </object>"
   })(document)
 </script>
