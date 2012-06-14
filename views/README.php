@@ -13,7 +13,7 @@
   interpreted.
 </div>
 <div class="section text">
-  <h2>Content's License</h2>
+  <h2>Content License</h2>
   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
   <br/>
   <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Sound" property="dct:title" rel="dct:type">EchandoCodigo Podcast</span>
@@ -21,6 +21,10 @@
   is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
   Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://echandocodigo.com" rel="dct:source">echandocodigo.com</a>.
   Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://echandocodigo.com" rel="cc:morePermissions">http://echandocodigo.com</a>.
+</div>
+<div class="section text">
+  <h2>Music License</h2>
+  The music that we play in our podcasts belongs to <a href="http://www.bitbasic.co.uk/">http://www.bitbasic.co.uk/</a>.
 </div>
 <div class="section text">
   <h2>Software License</h2>
