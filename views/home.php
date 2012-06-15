@@ -19,7 +19,7 @@
     , 'OOP','MVC','REST','Cookies','Remote Debugging','Mobile','Touch','Linux'
     , 'OSX','FOSS','Freelance','Venezuela');
     foreach ($temas as $k => $v) {
-      echo "<a href='https://twitter.com/#!/search/%40echandocodigo%20%23$v'><div class='tema'>$v</div></a>";
+      echo "<a href='https://twitter.com/#!/search/%40echandocodigo%20%23$v' target='_blank'><div class='tema'>$v</div></a>";
     }
   ?>
 </div>
