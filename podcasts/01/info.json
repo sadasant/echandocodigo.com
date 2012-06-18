@@ -1,6 +1,6 @@
 { "id"          : "01"
 , "title"       : "Primer Podcast."
-, "date"        : "29/04/2012"
+, "date"        : "Sun Apr 29 2012 9:30:00 GMT-0430 (VET)"
 , "duration"    : "01:04:40"
 , "description" : "Liberaciones de código, aplicaciones móviles, remote debugging, GIT y VIM."
 , "people"      : {

@@ -41,7 +41,8 @@
   <table class="details">
     <tr>
       <td>Duración: <?=$p[info]->duration?></td>
-      <td>Fecha:    <?=$p[info]->date?>    </td>
+      <?$date = explode(' ', $p[info]->date)?>
+      <td>Fecha: <?=$date[2].' '.$date[1].' '.$date[3]?></td>
       <td><a href=" <?=$p[info]->location?>" target="_blank">&rarr; Descargar &larr;</a></td>
     </tr>
   </table>
