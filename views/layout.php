@@ -32,7 +32,7 @@
   <div id="btm">
     <a href="/README">
       EchandoCodigo.com <br/>
-      Copyright <?=date('y')?> <br/>
+      Copyright <?=date('Y')?> <br/>
       README
     </a>
   </div>
